@@ -5,20 +5,20 @@ import com.gsanap.loggerlib.models.enums.SinkType;
 public class FileSinkConfig extends SinkConfig {
 
     private String fileLocation;
-    private Long maxFileSizeInKB;
+    private Long maxFileSizeInBytes;
 
 
-    public FileSinkConfig(String fileLocation, Long maxFileSizeInKB) {
+    public FileSinkConfig(String fileLocation, Long maxFileSizeInBytes) {
         this.setSinkType(SinkType.FILE);
         this.fileLocation = fileLocation;
-        this.maxFileSizeInKB = maxFileSizeInKB;
+        this.maxFileSizeInBytes = maxFileSizeInBytes;
     }
 
     public String getFileLocation() {
         return fileLocation;
     }
 
-    public Long getMaxFileSizeInKB() {
-        return maxFileSizeInKB;
+    public Long getMaxFileSizeInBytes() {
+        return maxFileSizeInBytes;
     }
 }

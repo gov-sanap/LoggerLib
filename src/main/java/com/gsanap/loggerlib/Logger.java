@@ -8,6 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 import java.util.Objects;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class Logger {
 
@@ -21,7 +24,6 @@ public class Logger {
         this.defaultSink = defaultSink;
     }
 
-
     public boolean log(LogLevel logLevel, String name, Object content){
         if (logLevel == null){
             logLevel = loggerConfig.getDefaultLogLevel();
@@ -29,15 +31,6 @@ public class Logger {
         Message message = getMessage(logLevel, name, content);
         ISink sink = logLevelSinkMap.getOrDefault(logLevel, defaultSink);
         return sink.log(message);
-    }
-
-    public void logAsync(LogLevel logLevel, String name, Object content){
-        if (logLevel == null){
-            logLevel = loggerConfig.getDefaultLogLevel();
-        }
-        Message message = getMessage(logLevel, name, content);
-        ISink sink = logLevelSinkMap.getOrDefault(logLevel, defaultSink);
-        sink.logAsync(message);
     }
 
     private Message getMessage(LogLevel logLevel, String name, Object content) {

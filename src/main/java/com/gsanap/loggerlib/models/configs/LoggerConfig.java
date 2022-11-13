@@ -44,4 +44,12 @@ public class LoggerConfig {
     public String getDateFormat() {
         return dateFormat;
     }
+
+    public void setDefaultLogLevel(LogLevel defaultLogLevel) {
+        this.defaultLogLevel = defaultLogLevel;
+    }
+
+    public void setDefaultSinkConfig(SinkConfig defaultSinkConfig) {
+        this.defaultSinkConfig = defaultSinkConfig;
+    }
 }

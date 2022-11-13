@@ -15,13 +15,11 @@ public class ConsoleSink implements ISink {
     @Override
     public boolean log(Message message) {
         String messageLine = Utils.createMessageLine(message);
+        if (messageLine == null || messageLine.isEmpty()){
+            return false;
+        }
         System.out.println(messageLine);
         return true;
-    }
-
-    @Override
-    public void logAsync(Message message) {
-
     }
 
 }
