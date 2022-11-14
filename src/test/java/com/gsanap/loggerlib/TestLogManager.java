@@ -5,7 +5,6 @@ import com.gsanap.loggerlib.models.configs.ConsoleSinkConfig;
 import com.gsanap.loggerlib.models.enums.LogLevel;
 import com.gsanap.loggerlib.models.configs.FileSinkConfig;
 import com.gsanap.loggerlib.models.configs.LoggerConfig;
-import com.gsanap.loggerlib.validators.LoggerConfigValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

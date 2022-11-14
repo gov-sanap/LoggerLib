@@ -1,6 +1,5 @@
 package com.gsanap.loggerlib;
 
-import com.gsanap.loggerlib.exceptions.InvalidConfigException;
 import com.gsanap.loggerlib.models.Message;
 import com.gsanap.loggerlib.validators.MessageValidator;
 
