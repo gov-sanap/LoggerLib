@@ -1,3 +1,6 @@
+For testing end to end you can use following testClass
+``src/test/java/com/gsanap/loggerlib/TestLogManager.java``
+
 Following are the steps to use this library
 
 1. Simple use with consoleLogSink
